@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kvog & Style by Leigh, LLC</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ffe4e1, #fff0f5);
+      color: #333;
+    }
+    header {
+      background-color: #ffb6c1;
+      background-image: url('https://images.unsplash.com/photo-1620799140402-dfbb8f83c7b5?auto=format&fit=crop&w=1400&q=80');
+      background-size: cover;
+      background-position: center;
+      padding: 2rem;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+    header h1,
+    header p {
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      font-weight: bold;
+    }
+    header p {
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+    nav {
+      text-align: center;
+      background-color: #ffe4e9;
+      padding: 1rem;
+    }
+    nav a {
+      margin: 0 1.5rem;
+      text-decoration: none;
+      color: #c71585;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    .product-category {
+      background-image: url('https://images.unsplash.com/photo-1603252109303-2751441c4f5c?auto=format&fit=crop&w=1400&q=80');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+    .product-category h2 {
+      color: #d63384;
+      border-bottom: 2px solid #d63384;
+      padding-bottom: 0.5rem;
+    }
+    #feedback {
+      background-color: #f9d8e5;
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+    #feedback h2 {
+      color: #b03060;
+    }
+    #feedback textarea {
+      width: 100%;
+      height: 120px;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+      margin-top: 1rem;
+    }
+    #feedback button {
+      margin-top: 1rem;
+      background-color: #cc3366;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+    .feedback-gallery {
+      margin-top: 2rem;
+    }
+    .feedback-gallery h3 {
+      margin-bottom: 1rem;
+      color: #cc3366;
+    }
+    .feedback-gallery .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .feedback-gallery img {
+      width: 200px;
+      height: auto;
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    footer {
+      background-image: url('https://images.unsplash.com/photo-1612392061780-9c14cfefb8d9');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+    footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+    footer a {
+      color: #fff0f5;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kvog & Style by Leigh, LLC</h1>
+    <p><strong>𝐒𝐢𝐧𝐜𝐞 𝟐𝟎𝟐𝟐</strong> — your go-to destination for the latest fashion trends, serving glamour in every bag, apparel, and jewelry.</p>
+  </header>
+
+  <nav>
+    <a href="#bags">Bags</a>
+    <a href="#apparels">Apparels</a>
+    <a href="#jewelries">Jewelries</a>
+    <a href="#info">Info</a>
+    <a href="#feedback">Feedback</a>
+  </nav>
+
+  <section id="bags" class="product-category">
+    <h2>Bags</h2>
+    <p>Discover our curated collection of fashionable and functional bags to elevate your style.</p>
+  </section>
+
+  <section id="apparels" class="product-category">
+    <h2>Apparels</h2>
+    <p>Stay on-trend with our stylish apparel selection, perfect for any occasion.</p>
+  </section>
+
+  <section id="jewelries" class="product-category">
+    <h2>Jewelries</h2>
+    <p>Add the finishing touch with our stunning jewelry pieces designed to make you shine.</p>
+  </section>
+
+  <section id="info">
+    <h2>Payment & Shipping</h2>
+    <p><strong>Payment Methods:</strong> Venmo, Cash App, and Zelle.</p>
+    <p><strong>Shipping:</strong> We ship via USPS and UPS.</p>
+    <p><strong>Location:</strong> Southern California, USA.</p>
+  </section>
+
+  <section id="feedback">
+    <h2>Customer Feedback</h2>
+    <p>We love hearing from you! Share your thoughts, reviews, or suggestions below:</p>
+    <textarea placeholder="Write your feedback here..."></textarea>
+    <br />
+    <button>Submit Feedback</button>
+
+    <div class="feedback-gallery">
+      <h3>Customer Love Gallery</h3>
+      <div class="gallery-grid">
+        <img src="https://example.com/customer1.jpg" alt="Customer with product">
+        <img src="https://example.com/customer2.jpg" alt="Customer wearing apparel">
+        <img src="https://example.com/customer3.jpg" alt="Customer holding bag">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kvog & Style by Leigh, LLC. All rights reserved.</p>
+    <p>
+      Follow us on:
+      <a href="https://www.facebook.com/vogueandstylebyleighLLC" target="_blank">Kvog & Style by Leigh, LLC Facebook Page</a>
+      |
+      <a href="https://www.facebook.com/leila.felicestiamzon" target="_blank">Owner: Leila Felice Stiamzon</a>
+    </p>
+  </footer>
+</body>
+</html>
