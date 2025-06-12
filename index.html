@@ -80,6 +80,19 @@
       border-bottom: 2px solid #d63384;
       padding-bottom: 0.5rem;
     }
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .gallery-grid img {
+      width: 200px;
+      height: auto;
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
     #feedback {
       background-color: #f9d8e5;
       padding: 2rem;
@@ -106,24 +119,6 @@
       font-size: 1rem;
       border-radius: 0.5rem;
       cursor: pointer;
-    }
-    .feedback-gallery {
-      margin-top: 2rem;
-    }
-    .feedback-gallery h3 {
-      margin-bottom: 1rem;
-      color: #cc3366;
-    }
-    .feedback-gallery .gallery-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .feedback-gallery img {
-      width: 200px;
-      height: auto;
-      border-radius: 0.75rem;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
     footer {
       background-image: url('https://images.unsplash.com/photo-1612392061780-9c14cfefb8d9');
@@ -170,7 +165,10 @@
 
   <section id="bags" class="product-category">
     <h2>Bags</h2>
-    <p>Discover collection of fashionable and functional bags to elevate your style.</p>
+    <p>Discover our curated collection of fashionable and functional bags to elevate your style.</p>
+    <div class="gallery-grid">
+      <!-- Bag images go here -->
+    </div>
   </section>
 
   <section id="apparels" class="product-category">
@@ -197,23 +195,14 @@
     <br />
     <button>Submit Feedback</button>
 
-<div class="feedback-gallery">
+    <div class="feedback-gallery">
       <h3 onclick="toggleGallery()" style="cursor: pointer; color: #cc3366; text-decoration: underline;">
         Customer Love Gallery ▼
       </h3>
       <div id="gallery-grid" class="gallery-grid" style="display: none;">
-        <img src="images/customer1.jpg">
-        <img src="images/customer2.jpg">
-        <img src="images/customer3.jpg">
-        <img src="images/customer4.jpg">
-        <img src="images/customer5.jpg">
-        <img src="images/customer6.jpg">
-        <img src="images/customer7.jpg">
-        <img src="images/customer8.jpg">
-        <img src="images/customer9.jpg">
-        <img src="images/customer10.jpg">
-        <img src="images/customer11.jpg">
-        <img src="images/customer12.jpg">
+        <img src="images/review1.jpg" alt="Customer with product" onclick="openModal(this.src)">
+        <img src="images/review2.jpg" alt="Customer wearing apparel" onclick="openModal(this.src)">
+        <img src="images/review3.jpg" alt="Customer holding bag" onclick="openModal(this.src)">
       </div>
     </div>
   </section>
@@ -224,8 +213,39 @@
       Follow us on:
       <a href="https://www.facebook.com/vogueandstylebyleighLLC" target="_blank">Kvog & Style by Leigh, LLC Facebook Page</a>
       |
-      <a href="https://www.facebook.com/leila.felicestiamzon" target="_blank">Owner: Leila Felices tiamzon</a>
+      <a href="https://www.facebook.com/leila.felicestiamzon" target="_blank">Owner: Leila Felice Stiamzon</a>
     </p>
   </footer>
+
+  <script>
+    function toggleGallery() {
+      const gallery = document.getElementById("gallery-grid");
+      gallery.style.display = gallery.style.display === "none" ? "flex" : "none";
+    }
+
+    function openModal(src) {
+      const modal = document.createElement("div");
+      modal.style.position = "fixed";
+      modal.style.top = 0;
+      modal.style.left = 0;
+      modal.style.width = "100vw";
+      modal.style.height = "100vh";
+      modal.style.background = "rgba(0,0,0,0.8)";
+      modal.style.display = "flex";
+      modal.style.justifyContent = "center";
+      modal.style.alignItems = "center";
+      modal.style.zIndex = 1000;
+
+      const img = document.createElement("img");
+      img.src = src;
+      img.style.maxWidth = "90%";
+      img.style.maxHeight = "90%";
+      img.style.borderRadius = "1rem";
+      modal.appendChild(img);
+
+      modal.onclick = () => document.body.removeChild(modal);
+      document.body.appendChild(modal);
+    }
+  </script>
 </body>
 </html>
