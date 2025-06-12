@@ -197,21 +197,14 @@
     <br />
     <button>Submit Feedback</button>
 
-    <div class="feedback-gallery">
-      <h3>Customer Love Gallery</h3>
-      <div class="gallery-grid">
-        <img src=customer1.jpg>
-        <img src=customer2.jpg>
-        <img src=customer3.jpg>
-        <img src=customer4.jpg>
-        <img src=customer5.jpg>
-        <img src=customer6.jpg>
-        <img src=customer7.jpg>
-        <img src=customer8.jpg>
-        <img src=customer9.jpg>
-        <img src=customer10.jpg>
-        <img src=customer11.jpg>
-        <img src=customer12.jpg>
+<div class="feedback-gallery">
+      <h3 onclick="toggleGallery()" style="cursor: pointer; color: #cc3366; text-decoration: underline;">
+        Customer Love Gallery ▼
+      </h3>
+      <div id="gallery-grid" class="gallery-grid" style="display: none;">
+        <img src="images/customer1.jpg" onclick="openModal(this.src)">
+        <img src="images/customer2.jpg" onclick="openModal(this.src)">
+        <img src="images/customer3.jpg" onclick="openModal(this.src)">
       </div>
     </div>
   </section>
