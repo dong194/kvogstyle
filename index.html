@@ -147,6 +147,36 @@
       margin: 0 0.5rem;
       font-weight: bold;
     }
+   /* Bouncing Messenger Button */
+    @keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.messenger-float {
+  animation: bounce 2s infinite;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0084ff;
+  padding: 12px;
+  border-radius: 50%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.messenger-float img {
+  width: 32px;
+  height: 32px;
+}
+    
   </style>
 </head>
 <body>
@@ -374,6 +404,30 @@
       <a href="https://www.facebook.com/leila.felicestiamzon" target="_blank">Owner: Leila Felices Tiamzon</a>
     </p>
   </footer>
+
+  <!-- Messenger Floating Icon -->
+  <a href="https://m.me/vogueandstylebyleighLLC" target="_blank" title="Chat with us on Messenger" class="messenger-bounce">
+    <img src="messlogo.png">
+  </a>
+
+  <!-- Greeting Popup -->
+<div class="messenger-popup" id="greeting-popup">
+  👋 Hi there! Chat with us on Messenger!
+</div>
+
+  <script>
+  setTimeout(() => {
+    const popup = document.getElementById('greeting-popup');
+    if (popup) popup.style.display = 'none';
+  }, 10000); // hides after 10 seconds
+</script>
+  
+  <script>
+    function toggleGallery() {
+      const gallery = document.getElementById("gallery-grid");
+      gallery.style.display = gallery.style.display === "none" ? "flex" : "none";
+    }
+
 
   <script>
     function toggleGallery() {
