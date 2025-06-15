@@ -703,6 +703,9 @@
       img.style.maxHeight = "90%";
       img.style.borderRadius = "1rem";
       modal.appendChild(img);
+
+      modal.onclick = () => document.body.removeChild(modal);
+      document.body.appendChild(modal);
     }
   </script>
 </body>
