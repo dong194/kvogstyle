@@ -416,8 +416,15 @@
 
   <!-- Greeting Popup -->
 <div class="messenger-popup" id="greeting-popup">
-  👋 Hi there! Chat with us on Messenger!
+  👋 Hi sissy! Chat with us on Messenger!
 </div>
+
+  <script>
+  setTimeout(() => {
+    const popup = document.getElementById('greeting-popup');
+    if (popup) popup.style.display = 'none';
+  }, 10000); // hides after 10 seconds
+</script>
 
   <script>
     function toggleGallery() {
